@@ -1,0 +1,34 @@
+{
+  "private": false,
+  "name": "tn-uniqname",
+  "version": "1.0.0",
+  "description": " ",
+  "keywords": [],
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "Build": "rimraf dist && rollup -c",
+    "Publish": "rimraf .dev/parcel/dist & rimraf .dev/parcel/cache && npm run Build && yarn publish"
+  },
+  "author": "Turnova",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/runtime": "^7.20.0",
+    "tn-capitalize": "^1.1.3",
+    "tn-case": "^3.0.1",
+    "tn-random": "^1.0.1",
+    "unique-names-generator": "^4.7.1"
+  },
+  "peerDependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.19.6",
+    "@babel/plugin-transform-runtime": "^7.19.6",
+    "@babel/preset-env": "^7.19.4",
+    "@rollup/plugin-babel": "^6.0.2",
+    "rollup": "^3.2.3",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "typescript": "^4.8.4"
+  }
+}
